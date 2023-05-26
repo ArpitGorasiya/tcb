@@ -12,10 +12,10 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api/course', course)
-app.use('/api/user', user)
-app.use('/api/payment', payment)
-app.use('/api/other', other)
+app.use('/api/v1', course)
+app.use('/api/v1', user)
+app.use('/api/v1', payment)
+app.use('/api/v1', other)
 
 app.get("/", (req, res) => {
     res.json("Server is Running")
