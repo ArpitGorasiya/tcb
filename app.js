@@ -17,6 +17,10 @@ app.use('/api/user', user)
 app.use('/api/payment', payment)
 app.use('/api/other', other)
 
+app.get("/", (req, res) => {
+    res.json("Server is Running")
+})
+
 export default app
 
 app.use(ErrorMiddleware)
